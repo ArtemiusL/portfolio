@@ -1,0 +1,8 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+.header {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}

@@ -1,0 +1,14 @@
+@import '~styles/variables';
+
+.root {
+  display: flex;
+  width: 100%;
+}
+
+.withPaddings {
+  padding: 0 $border;
+}
+
+.staticHeight {
+  flex-shrink: 0;
+}

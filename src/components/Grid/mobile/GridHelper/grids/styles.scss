@@ -1,0 +1,33 @@
+@import '~styles/variables';
+
+.gridWrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.collectionGrid {
+  &::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: $mobile-border * 2;
+    top: 0;
+    outline: 1px solid aqua;
+  }
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    right: $mobile-border * 2;
+    top: 0;
+    outline: 1px solid aqua;
+  }
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./fonts/SofiaProBold.eot');
+  src: local('Sofia Pro Bold'), local('SofiaProBold'),
+      url('./fonts/SofiaProBold.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/SofiaProBold.woff') format('woff'),
+      url('./fonts/SofiaProBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('./fonts/SofiaProRegular.eot');
+  src: local('Sofia Pro Regular'), local('SofiaProRegular'),
+      url('./fonts/SofiaProRegular.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/SofiaProRegular.woff') format('woff'),
+      url('./fonts/SofiaProRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('./fonts/SofiaProMedium.eot');
+    src: local('Sofia Pro Medium'), local('SofiaProMedium'),
+        url('./fonts/SofiaProMedium.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/SofiaProMedium.woff') format('woff'),
+        url('./fonts/SofiaProMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro Semi';
+  src: url('./fonts/SofiaProSemiBold.eot');
+  src: local('Sofia Pro Semi Bold'), local('SofiaProSemiBold'),
+      url('./fonts/SofiaProSemiBold.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/SofiaProSemiBold.woff') format('woff'),
+      url('./fonts/SofiaProSemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

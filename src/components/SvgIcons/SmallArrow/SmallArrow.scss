@@ -1,0 +1,41 @@
+@import '~styles/mixins';
+@import '~styles/variables';
+
+.root {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+  width: desktop(38);
+  height: desktop(38);
+}
+
+.theme {
+  &-white {
+    stroke: $color-white;
+  }
+
+  &-black {
+    stroke: $color-black;
+  }
+}
+
+.duration {
+  &-bottom {
+    transform: rotate(90deg);
+  }
+
+  &-top {
+    transform: rotate(-90deg);
+  }
+
+  &-left {
+    transform: rotate(180deg);
+  }
+}
+
+.size {
+  &-small {
+    width: desktop(20);
+    height: desktop(20);
+  }
+}

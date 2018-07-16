@@ -1,0 +1,23 @@
+@import '~styles/variables';
+
+.root {
+  display: block;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // height: 100%;
+  overflow: auto;
+  padding: $border;
+  z-index: 1; // for visible outline helpers on safari
+}
+
+.without {
+  &-top {
+    padding-top: 0;
+  }
+
+  &-bottom {
+    padding-bottom: 0;
+  }
+}

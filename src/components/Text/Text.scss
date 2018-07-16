@@ -1,0 +1,280 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+.root {
+  transition-property: color, opacity;
+  transition-duration: $speed-fast;
+}
+
+.size {
+  &-small {
+    @include font-desctop(14);
+  }
+
+  &-normal {
+    @include font-desctop(16, 28); // 25
+  }
+
+  &-medium {
+    @include font-desctop(35, 40); // 43
+  }
+
+  &-medium-l {
+    @include font-desctop(30, 30);
+  }
+
+  &-medium-xl {
+    @include font-desctop(36, 44); // 40
+  }
+
+  &-average {
+    @include font-desctop(18, 26);
+  }
+
+  &-big {
+    @include font-desctop(90, 95);
+  }
+
+  &-large {
+    @include font-desctop(140, 140);
+  }
+}
+
+.mobileSize {
+  &-small {
+    @include font-mobile(14, 20);
+  }
+
+  &-small-xs {
+    @include font-mobile(10, 14);
+  }
+
+  &-small-xl {
+    @include font-mobile(12, 15);
+  }
+
+  &-normal {
+    @include font-mobile(20, 32);
+  }
+
+  &-medium {
+    @include font-mobile(22, 25);
+  }
+
+  &-medium-xl {
+    @include font-mobile(25, 32);
+  }
+
+  &-average {
+    @include font-mobile(15, 25);
+  }
+
+  &-big {
+    @include font-mobile(42, 42);
+  }
+
+  &-large {
+    @include font-mobile(95, 95);
+  }
+}
+
+.letterSpacingSize {
+  &-big {
+    @include media-max-desktop {
+      letter-spacing: 0.025em;
+    }
+
+    @include media-tablet {
+      letter-spacing: tablet(25);
+    }
+
+    @include media-mobile {
+      letter-spacing: mobile(25);
+    }
+  }
+}
+
+.fontWeight {
+  &-bold {
+    font-weight: bold;
+  }
+
+  &-semi-bold {
+    font-family: 'Sofia Pro Semi', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+
+  &-medium {
+    font-weight: 500;
+  }
+
+  &-normal {
+    font-weight: normal;
+  }
+}
+
+.color {
+  &-white {
+    color: $color-white;
+  }
+
+  &-black {
+    color: $color-black;
+  }
+
+  &-silver {
+    color: $color-silver;
+  }
+
+  &-red {
+    color: red;
+  }
+}
+
+.opacity {
+  &-light {
+    opacity: 0.2;
+  }
+
+  &-middle {
+    opacity: 0.3;
+  }
+
+  &-dark {
+    opacity: 0.4;
+  }
+}
+
+.textAlign {
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+.textTransform {
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-none {
+    text-transform: none;
+  }
+}
+
+.whiteSpace {
+  &-normal {
+    white-space: normal;
+  }
+
+  &-nowrap {
+    white-space: nowrap;
+  }
+
+  &-prewrap {
+    white-space: pre-wrap;
+  }
+}
+
+.hover {
+  &-white {
+    @include hover {
+      color: $color-white;
+    }
+  }
+
+  &-black {
+    @include hover {
+      color: $color-black-hover;
+    }
+  }
+
+  &-silver {
+    @include hover {
+      color: $color-silver;
+    }
+  }
+
+  &-opacity {
+    @include hover {
+      opacity: 1;
+    }
+  }
+
+  &-white-to-black {
+    @include hover {
+      color: $color-black;
+    }
+  }
+}
+
+.pointerEvents {
+  &-none {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.base-border {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    display: block;
+    bottom: desktop(7);
+    left: 0;
+    height: 1px;
+    width: calc(100% + 2px);
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.border {
+  &-white {
+    @extend .base-border;
+
+    &::after {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    @include hover {
+      &::after {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  &-black {
+    @extend .base-border;
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    @include hover {
+      &::after {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+.rotate {
+  &-left {
+    transform: translate3d(0, 100%, 0) rotate(-90deg);
+    transform-origin: left top;
+  }
+
+  &-right {
+    transform: translate3d(40%, 100%, 0) rotate(90deg);
+  }
+}

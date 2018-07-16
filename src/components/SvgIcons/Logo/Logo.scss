@@ -1,0 +1,15 @@
+@import '~styles/variables';
+
+.root {
+  font-size: 20px;
+}
+
+.theme {
+  &-white {
+    color: $color-white;
+  }
+
+  &-black {
+    color: $color-black;
+  }
+}

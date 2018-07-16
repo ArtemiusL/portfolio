@@ -1,0 +1,33 @@
+$color-black: #000;
+$color-white: #fff;
+$color-silver: #a0a0a0;
+$color-light-silver: #f2f2f2;
+
+$color-black-hover: #4c4c4c;
+
+$mobile-width: 600px;
+$media-tablet-width: 1024px;
+$max-desktop: 1920px;
+
+// ---grid--- //
+$border-vertical: 50px;
+$border: 60px $border-vertical;
+$mobile-border: 25px;
+$mobile-border-vertical: 25px;
+
+$max-columns: 12;
+$mobile-max-columns: 4;
+
+$mobile-row-height: 30px;
+$mobile-column-width: 25%;
+// ---grid--- //
+
+// layer levels (z-index)
+$header-layear: 10;
+
+// animation speed
+$speed-fast: 0.2s;
+$speed-medium: 0.3s;
+
+$timing-button-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+

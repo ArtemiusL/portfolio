@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+}
+
+.pickerWrapp {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.pickerList {
+  transition: transform 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  text-align: right;
+}
+
+.hidden {
+  visibility: hidden;
+}

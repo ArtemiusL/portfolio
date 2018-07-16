@@ -1,0 +1,37 @@
+@import '~styles/variables';
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $media-tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $media-tablet-width) and (max-width: $max-desktop) {
+    @content;
+  }
+}
+
+@mixin media-max-desktop {
+  @media (max-width: $max-desktop) {
+    @content;
+  }
+}
+
+@mixin media-between($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin media-safari {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @content;
+  }
+}

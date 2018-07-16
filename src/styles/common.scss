@@ -1,0 +1,70 @@
+@import '~styles/media';
+@import '~styles/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+:global(.route-enter) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body,
+:global(#react-view) {
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+}
+
+html {
+  @include media-desktop {
+    font-size: 10vw;
+  }
+
+  @include media-tablet {
+    font-size: 20vw;
+  }
+
+  @include media-mobile {
+    font-size: 40vw;
+  }
+
+  background: $color-black;
+}
+
+body {
+  font-family: 'Sofia Pro', Arial, Helvetica, sans-serif;
+  font-smoothing: antialiased; /* stylelint-disable-line property-no-unknown */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 10px;
+}
+
+:global(#react-view) {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+

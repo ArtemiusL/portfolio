@@ -1,0 +1,31 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+.root {
+  padding: 0;
+  background-color: $color-black;
+}
+
+.slider {
+  height: 150px;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3dbaed;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.arrow {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}

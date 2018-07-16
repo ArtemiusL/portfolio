@@ -1,0 +1,35 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+.root {
+  width: calc(100% + #{$border-vertical * 2});
+  height: 100%;
+  margin-left: -$border-vertical;
+}
+
+.slider {
+  transform: translate3d(0, 30%, 0);
+  height: 100%;
+}
+
+.separate {
+  flex-shrink: 0;
+  width: desktop(100);
+}
+
+.conpinsation {
+  @include width-column-with-border;
+
+  flex-shrink: 0;
+}
+
+.active {
+  span {
+    color: #000;
+  }
+}
+
+.border {
+  flex-shrink: 0;
+  width: $border-vertical;
+}

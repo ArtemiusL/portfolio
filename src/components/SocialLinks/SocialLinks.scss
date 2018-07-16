@@ -1,0 +1,13 @@
+@import '~styles/mixins';
+
+.root {
+  display: flex;
+}
+
+.item {
+  padding-left: desktop(40);
+
+  &:first-child {
+    padding-left: 0;
+  }
+}

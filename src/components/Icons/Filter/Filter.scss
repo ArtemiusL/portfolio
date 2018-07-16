@@ -1,0 +1,47 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+.root {
+  display: flex;
+  padding: 0;
+}
+
+.dote {
+  display: block;
+  background-color: $color-white;
+  border-radius: 50%;
+  width: desktop(10);
+  height: desktop(10);
+  flex-shrink: 0;
+
+  &:nth-child(2) {
+    margin: 0 desktop(10);
+  }
+
+  transition:
+    transform $speed-medium $timing-button-function,
+    background-color $speed-fast $timing-button-function;
+}
+
+.status {
+  &-hidden {
+    .dote {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &-active {
+    .dote {
+      background-color: $color-black;
+
+      &:nth-child(1) {
+        transform: translate3d(calc(200%), 0, 0);
+      }
+
+      &:nth-child(3) {
+        transform: translate3d(calc(-200%), 0, 0);
+      }
+    }
+  }
+}

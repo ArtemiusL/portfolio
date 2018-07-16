@@ -1,0 +1,91 @@
+@import '~styles/variables';
+@import '~styles/media';
+
+@mixin hover {
+  @include media-desktop {
+    &:hover {
+      @content;
+    }
+  }
+
+  @include media-mobile {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin width-column-with-border($columns: 1) {
+  // (100% - #{$border-vertical} * 2) -> ширина сетки без внешних отступов
+  // (* $columns / $max-columns) -> взять $columns частей из $max-columns
+  // (+ #{$border-vertical}) -> добавить ширину отступа
+
+  @include media-desktop {
+    width: calc(((100% - #{$border-vertical} * 2) * #{$columns} / #{$max-columns}) + #{$border-vertical});
+  }
+
+  @include media-mobile {
+    width: calc(((100% - #{$mobile-border-vertical} * 2) * #{$columns} / #{$mobile-max-columns}) + #{$mobile-border-vertical});
+  }
+}
+
+@mixin width-column($columns: 1) {
+  // (100% - #{$border-vertical} * 2) -> ширина сетки без внешних отступов
+  // (* $columns / $max-columns) -> взять $columns частей из $max-columns
+
+  @include media-desktop {
+    width: calc((100% - #{$border-vertical} * 2) * #{$columns} / #{$max-columns});
+  }
+
+  @include media-mobile {
+    width: calc((100% - #{$mobile-border-vertical} * 2) * #{$columns} / #{$mobile-max-columns});
+  }
+}
+
+@mixin font-desctop($pixels, $line-height: '') {
+  font-size: #{$pixels}px;
+
+  @if $line-height != '' {
+    line-height: #{$line-height}px;
+  }
+
+  @include media-max-desktop {
+    font-size: desktop($pixels);
+
+    @if $line-height != '' {
+      line-height: desktop($line-height);
+    }
+  }
+}
+
+@mixin font-tablet($pixels, $line-height: '') {
+  @include media-tablet {
+    font-size: tablet($pixels);
+
+    @if $line-height != '' {
+      line-height: tablet($line-height);
+    }
+  }
+}
+
+@mixin font-mobile($pixels, $line-height: '') {
+  @include media-mobile {
+    font-size: mobile($pixels);
+
+    @if $line-height != '' {
+      line-height: mobile($line-height);
+    }
+  }
+}
+
+@function desktop($pixels) {
+  @return #{$pixels / 192}rem;
+}
+
+@function tablet($pixels) {
+  @return #{$pixels / 102.4}rem;
+}
+
+@function mobile($pixels) {
+  @return #{$pixels / 60}rem;
+}

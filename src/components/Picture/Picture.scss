@@ -1,0 +1,26 @@
+@import '~styles/mixins';
+@import '~styles/variables';
+
+.wrap {
+  max-height: 100%;
+  display: flex;
+}
+
+.root {
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+.withBorderWidth {
+  &-one {
+    width: calc(100% + #{$border-vertical});
+    max-width: calc(100% + #{$border-vertical});
+  }
+
+  &-two {
+    width: calc(100% + (#{$border-vertical} * 2));
+    max-width: calc(100% + (#{$border-vertical} * 2));
+  }
+}

@@ -1,0 +1,40 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+.root {
+  cursor: pointer;
+  transition-property: color, opacity;
+  transition-duration: $speed-fast;
+}
+
+.hover {
+  &-white {
+    @include hover {
+      color: $color-white;
+    }
+  }
+
+  &-black {
+    @include hover {
+      color: $color-black-hover;
+    }
+  }
+
+  &-silver {
+    @include hover {
+      color: $color-silver;
+    }
+  }
+
+  &-opacity {
+    @include hover {
+      opacity: 0.3;
+    }
+  }
+
+  &-white-to-black {
+    @include hover {
+      color: $color-black;
+    }
+  }
+}

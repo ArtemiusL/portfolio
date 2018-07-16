@@ -1,0 +1,90 @@
+.root {
+  width: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.innerBlock {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-bottom: 100vh;
+}
+
+.child {
+  &:first-child {
+    padding-left: 25px;
+  }
+
+  &:last-child {
+    padding-right: 25px;
+  }
+}
+
+.defaultControls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+.dots {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    width: 10px;
+    margin: 0 5px 2px;
+    cursor: pointer;
+    font-size: 19px;
+    color: #d7d7d7;
+
+    &.active {
+      color: #05f;
+    }
+  }
+}
+
+.centrator {
+  flex-shrink: 0;
+}
+
+.active {
+  * {
+    // pointer-events: none;
+    // user-select: none;
+  }
+}
+
+.arrow {
+  color: #d7d7d7;
+}
+
+.disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+:global {
+  .visiblearea {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.5;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import './attention_seekers/_index';
+@import './bouncing_entrances/_index';
+@import './bouncing_exits/_index';
+@import './fading_entrances/_index';
+@import './fading_exits/_index';
+@import './flippers/_index';
+@import './lightspeed/_index';
+@import './rotating_entrances/_index';
+@import './rotating_exits/_index';
+@import './scaling_entrances/_index';
+@import './scaling_exits/_index';
+@import './sizes/_index';
+@import './sliding_entrances/_index';
+@import './sliding_exits/_index';
+@import './specials/_index';
+@import './zooming_entrances/_index';
+@import './zooming_exits/_index';
