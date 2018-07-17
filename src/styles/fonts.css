@@ -1,32 +1,35 @@
 @font-face {
   font-family: 'Geometria';
-  src: url('./fonts/geometria-webfont.ttf');
-  src: local('Geometria'),
-  url('./fonts/geometria-webfont.ttf') format('truetype'),
+  src: url('./fonts/geometria-webfont.ttf') format('truetype'),
       url('./fonts/geometria-webfont.woff2') format('woff2'),
       url('./fonts/geometria-webfont.woff') format('woff');
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Geometria';
-  src: url('./fonts/geometria-bold-webfont.ttf');
-  src: local('Geometria'),
-  url('./fonts/geometria-bold-webfont.ttf') format('truetype'),
+  src: url('./fonts/geometria-bold-webfont.ttf') format('truetype'),
       url('./fonts/geometria-bold-webfont.woff2') format('woff2'),
       url('./fonts/geometria-bold-webfont.woff') format('woff');
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Geometria';
-  src: url('./fonts/geometria-medium-webfont.ttf');
-  src: local('Geometria'),
-  url('./fonts/geometria-medium-webfont.ttf') format('truetype'),
+  src: url('./fonts/geometria-medium-webfont.ttf') format('truetype'),
       url('./fonts/geometria-medium-webfont.woff2') format('woff2'),
       url('./fonts/geometria-medium-webfont.woff') format('woff');
-  font-weight: medium;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('./fonts/geometria-black-webfont.ttf') format('truetype'),
+      url('./fonts/geometria-black-webfont.woff2') format('woff2'),
+      url('./fonts/geometria-black-webfont.woff') format('woff');
+  font-weight: 900;
   font-style: normal;
 }

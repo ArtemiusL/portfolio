@@ -1,3 +1,26 @@
 .root {
-  font-style: normal;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.title {
+  margin-top: 24vh;
+  margin-bottom: 1vh;
+}
+
+.content {
+  box-shadow: -30px -10px 70px 10px rgba(0, 0, 0, 1);
+  position: relative;
+  z-index: 10000;
+}
+
+.footerGradient {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+  box-shadow: 0 -20px 50px 10px rgba(0, 0, 0, 0.1);
 }

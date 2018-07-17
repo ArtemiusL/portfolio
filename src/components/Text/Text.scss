@@ -99,6 +99,10 @@
     font-weight: bold;
   }
 
+  &-black {
+    font-weight: 900;
+  }
+
   &-semi-bold {
     font-family: 'Sofia Pro Semi', Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -142,6 +146,10 @@
 
   &-dark {
     opacity: 0.4;
+  }
+
+  &-half {
+    opacity: 0.53;
   }
 }
 

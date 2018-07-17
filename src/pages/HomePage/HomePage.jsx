@@ -12,11 +12,7 @@ const HomePage = () => (
   <Fragment>
     <Helmet title="Home" />
     <div styleName="root">
-      <Welcome>
-        <Text color="white">
-          Welcome screen
-        </Text>
-      </Welcome>
+      <Welcome />
     </div>
   </Fragment>
 );
