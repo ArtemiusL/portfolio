@@ -1,3 +1,5 @@
+
+/* eslint-disable */
 import React, { PureComponent, Fragment } from 'react';
 import Helmet from 'react-helmet';
 

@@ -12,19 +12,19 @@ module.exports = function (shipit) {
     .parse(process.argv);
 
   const shipitSyncingSourceFolder = './shipit-syncing-source';
-  const deploymentFolder = '/var/www/makespace/cs';
+  const deploymentFolder = '/var/www/atb/cs';
   const releasesFolder = `${deploymentFolder}/releases`;
   const currentReleaseFolder = `${deploymentFolder}/current`;
   const sshKeyPath = '~/.ssh/id_rsa';
-  const appName = 'makespace';
+  const appName = 'atb';
   const nodePath = './src';
-  const gitRepUrl = 'git@git.snpdev.ru:saltpepper/makespace-html.git';
+  const gitRepUrl = 'git@git.snpdev.ru:saltpepper/atb-html.git';
 
   const branch = program.branch || 'develop';
   const nodeEnv = program.env || 'debug';
   const port = program.port || 3000;
 
-  const stagingServer = 'makespace@makespace-direct.snpdev.ru';
+  const stagingServer = 'atb@atb-direct.snpdev.ru';
   const productionServer = '';
 
   /* init main config */
@@ -66,7 +66,7 @@ module.exports = function (shipit) {
 
   shipit.blTask('startApp', function() {
     return shipit.remote(`cd ${currentReleaseFolder}
-      NODE_PATH=${nodePath} NODE_ENV=${nodeEnv} PORT=${port} pm2 start ./index.js -n ${appName}`);
+      NODE_PATH=${nodePath} NODE_ENV=${nodeEnv} PORT=${port} pm2 start ./dev.js -n ${appName}`);
   });
 
   shipit.blTask('deleteShipitWorkspace', function() {

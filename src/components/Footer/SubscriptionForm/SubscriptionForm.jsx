@@ -2,7 +2,6 @@ import CSSModules from 'react-css-modules';
 
 import {
   reduxForm,
-  Field,
   clearSubmitErrors,
 } from 'redux-form';
 
@@ -12,7 +11,6 @@ import React from 'react';
 import { submit } from './utils/validationSubmit';
 
 import Button from '_components/Button';
-import FormField from '_components/FormField';
 import Text from '_components/Text';
 
 import styles from './SubscriptionForm.scss';
@@ -29,12 +27,6 @@ const SubscriptionForm = (props) => {
         }
       }
     >
-      <Field
-        placeholder="Email"
-        styleName="input"
-        name="email"
-        component={FormField}
-      />
 
       <div styleName="button">
         <Button type="submit">

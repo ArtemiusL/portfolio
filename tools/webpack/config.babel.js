@@ -134,7 +134,6 @@ module.exports = {
           ],
           plugins: [
             'react-hot-loader/babel',
-            'loadable-components/babel',
             'lodash'
           ],
           env: { production: { plugins: ['transform-remove-console'] } }
@@ -189,12 +188,7 @@ module.exports = {
         }),
       },
       {
-        test: /\.(svg)$/,
-        loader: 'file',
-        options: { name: '[name].[hash:8].[ext]' }
-      },
-      {
-        test: /\.(woff2?|ttf|eot)$/,
+        test: /\.(woff2?|ttf|eot|svg)$/,
         loader: 'url',
         options: { limit: 10240, name: '[name].[hash:8].[ext]' }
       },
@@ -220,6 +214,8 @@ module.exports = {
       _constants: path.resolve(process.cwd(), 'src/constants'),
       _actions: path.resolve(process.cwd(), 'src/actions'),
       _api: path.resolve(process.cwd(), 'src/api'),
+      _utils: path.resolve(process.cwd(), 'src/utils'),
+      _hocs: path.resolve(process.cwd(), 'src/hocs'),
       _sagas: path.resolve(process.cwd(), 'src/sagas'),
       _config: path.resolve(process.cwd(), 'src/config'),
       _reducers: path.resolve(process.cwd(), 'src/reducers'),
@@ -227,14 +223,11 @@ module.exports = {
       _pages: path.resolve(process.cwd(), 'src/pages'),
       _containers: path.resolve(process.cwd(), 'src/containers'),
       _components: path.resolve(process.cwd(), 'src/components'),
-      _hocs: path.resolve(process.cwd(), 'src/hocs'),
       _pages: path.resolve(process.cwd(), 'src/pages'),
       _styles: path.resolve(process.cwd(), 'src/styles'),
       _images: path.resolve(process.cwd(), 'src/assets/images'),
-      _videos: path.resolve(process.cwd(), 'src/assets/videos'),
       _selectors: path.resolve(process.cwd(), 'src/selectors'),
-      _utils: path.resolve(process.cwd(), 'src/utils'),
-      _svg: path.resolve(process.cwd(), 'src/components/svg')
+      _localization: path.resolve(process.cwd(), 'src/localization'),
     },
     extensions: ['.js', '.jsx', '.json']
   },

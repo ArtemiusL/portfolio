@@ -7,7 +7,6 @@ import { getFilterStatus, getMenuStatus } from './utils/helperStatus';
 import withRouterParams from '_hocs/withRouterParams';
 
 import { Grid, GridRow, GridColumn } from '_components/Grid/desktop';
-import Logo from '_components/SvgIcons/Logo';
 
 import Buttons from './Buttons';
 import Filters from './Filters';
@@ -67,9 +66,7 @@ class Header extends Component {
         <div styleName="root">
           <Grid >
             <GridRow withoutHeight>
-              <GridColumn columns={2}>
-                <Logo />
-              </GridColumn>
+              <GridColumn columns={2} />
               <GridColumn columns={9} />
               <GridColumn columns={1}>
                 <Buttons
