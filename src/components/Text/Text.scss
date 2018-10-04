@@ -8,7 +8,7 @@
 
 .size {
   &-small {
-    @include font-desctop(14);
+    font-size: 14px;
   }
 
   &-normal {

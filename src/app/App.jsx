@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import checkDevice from '_utils/checkDevice';
 
 import SimpleAnimationPage from '_components/SimpleAnimationPage';
 import Header from '_components/Header';
@@ -37,6 +38,10 @@ class App extends Component {
       const viewport = getViewport(matches);
       onSwitchViewport(viewport);
     });
+
+    if (!checkDevice()) {
+      document.body.classList.add('noDevice');
+    }
   }
 
   render() {

@@ -4,7 +4,7 @@ import CSSModules from 'react-css-modules';
 
 import MenuParagraph from '_components/AnimationWrapper/MenuParagraph';
 import Text from '_components/Text';
-
+import Button from '_components/Button';
 import styles from './About.scss';
 
 import content from './content';
@@ -39,6 +39,11 @@ const About = ({ activeMenu, pageAnimation }) => (
         color="black"
       >
         {content.text}
+        <Button
+          href={content.link}
+          target="blank"
+        > {content.linkTitle}
+        </Button>
       </Text>
     </MenuParagraph>
   </div>

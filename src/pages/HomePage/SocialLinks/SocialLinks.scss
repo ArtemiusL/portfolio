@@ -1,6 +1,29 @@
 @import '~styles/mixins';
 @import '~styles/variables';
 
+.center {
+  position: absolute;
+  left: 10vw;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .root {
-  font-style: normal;
+  z-index: 2;
+  display: flex;
+  transform: translate3d(-50%, 0, 0) rotate(-90deg);
+  transform-origin: center;
+}
+
+.hover {
+  margin: 0 50px;
+  transform: translate3d(0, 50%, 0);
+}
+
+.item {
+  font-family: 'Geometria', sans-serif;
+  letter-spacing: 1.22px;
 }

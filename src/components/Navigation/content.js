@@ -1,16 +1,16 @@
 const content = {
   navigation: [
     {
-      title: 'Home',
-      link: '/',
+      title: 'MakeSpace',
+      link: 'https://makespace.snpdev.ru/',
     },
     {
-      title: 'Studio',
-      link: '/studio',
+      title: 'Novum',
+      link: 'https://novum.snpdev.ru/',
     },
     {
-      title: 'Work',
-      link: '/work',
+      title: 'GooseGaming',
+      link: 'https://goose.gg/',
     },
     {
       title: 'Team',

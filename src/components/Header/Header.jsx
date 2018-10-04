@@ -6,8 +6,6 @@ import { getFilterStatus, getMenuStatus } from './utils/helperStatus';
 
 import withRouterParams from '_hocs/withRouterParams';
 
-import { Grid, GridRow, GridColumn } from '_components/Grid/desktop';
-
 import Buttons from './Buttons';
 import Filters from './Filters';
 import Menu from './Menu';
@@ -64,22 +62,13 @@ class Header extends Component {
     return (
       <Fragment>
         <div styleName="root">
-          <Grid >
-            <GridRow withoutHeight>
-              <GridColumn columns={2} />
-              <GridColumn columns={9} />
-              <GridColumn columns={1}>
-                <Buttons
-                  visibleFilter={!filterMenu}
-                  onTogleFilter={this.onTogleFilter}
-                  onTogleMenu={this.onTogleMenu}
-                  filterStatus={filterStatus}
-                  menuStatus={menuStatus}
-                />
-              </GridColumn>
-            </GridRow>
-          </Grid>
-
+          <Buttons
+            visibleFilter={!filterMenu}
+            onTogleFilter={this.onTogleFilter}
+            onTogleMenu={this.onTogleMenu}
+            filterStatus={filterStatus}
+            menuStatus={menuStatus}
+          />
           <Menu
             activeMenu={this.state.menu}
             pageAnimation={pageAnimation}

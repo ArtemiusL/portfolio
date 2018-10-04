@@ -89,3 +89,13 @@
 @function mobile($pixels) {
   @return #{$pixels / 60}rem;
 }
+
+@mixin hover-touch {
+  &:active {
+    @content;
+  }
+
+  :global(.noDevice) &:hover {
+    @content;
+  }
+}

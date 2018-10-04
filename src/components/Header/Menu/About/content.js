@@ -1,6 +1,8 @@
 const content = {
   title: 'About',
-  text: 'Sharing stories, insights, and projects from inside the studio at Makespace.',
+  text: 'Пока мои лучшие проекты сделаны в составе команды ',
+  linkTitle: ' Salt & Pepper',
+  link: 'https://snp.agency/en',
 };
 
 export default content;

@@ -19,6 +19,7 @@ const Button = ({
   type,
   onClick,
   hover,
+  target,
   ...props
 }) => {
   const classes = modsClasses(styles, { color, hover });
@@ -35,6 +36,7 @@ const Button = ({
       className={classnames(className, classes)}
       to={to}
       href={href}
+      target={target}
       disabled={disabled}
       type={href || to ? false.toString() : type}
       onClick={onClick}
@@ -54,11 +56,13 @@ Button.propTypes = {
   to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   type: PropTypes.string,
   onClick: PropTypes.func,
+  target: PropTypes.string,
   hover: PropTypes.oneOf(['white', 'black', 'opacity', 'white-to-black']),
 };
 
 Button.defaultProps = {
   type: 'button',
+  target: 'self',
 };
 
 export default CSSModules(Button, styles);
